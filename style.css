@@ -1,0 +1,456 @@
+/* body settings */
+@font-face {
+    font-family: Montserrat;
+    src: url(Montserrat-Black.ttf);
+}
+@font-face{
+    font-family: MontserratLight;
+    src: url(Montserrat-Light.ttf);
+}
+@font-face{
+    font-family: MontserratBold;
+    src: url(Montserrat-Bold.ttf);
+}
+:root {
+    --hight-header: 6vw;
+    --hight-section: 80vh;
+    --hight-section-phone: 60vh;
+    --hight-section-tablet: 60vh;
+    --hight-header-mobile: 10vw;
+}
+body {
+    margin: 0;
+}
+/* header settings */
+/* headline */
+.headlines {
+    width: 100%;
+    height: var(--hight-header);
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid lightgray;
+    object-position: center;
+    /* position: fixed;
+    top: 0;
+    left: 0; */
+}
+.logo {
+    height: 1.5vw;
+    margin-left: 2vw;
+    font-weight: 900;  
+}
+.buttons {
+    margin-right: 3vw;
+}
+.subscribe {
+    position: relative;
+    padding: 0.55vw 2vw;
+    background-color: #df1763;
+    color: white;
+    font-size: 1.5vw;
+    border: none;
+    border-radius: 2vw;
+    font-family: MontserratBold;
+    transform: translateY(0);
+    transition: all .3s cubic-bezier(.5,2.5,.7,.7);
+}
+.subscribe:hover {
+    transform: translateY(-0.5vw);
+    cursor: pointer;
+}
+.login {
+    padding: 0.4vw 2vw;
+    background-color: white;
+    color: #df1763;
+    font-size: 1.5vw;
+    border: 2px solid;
+    border-color: #df1763;
+    border-radius: 2vw;
+    font-family: MontserratBold;
+    margin-left: 2vw;
+}
+.login:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+    background-color: #ecdfe5;
+    cursor: pointer;
+}
+
+/* hero image */
+.hero {
+    background-image: url(hero-photo.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: var(--hight-section);
+    /* margin-top: var(--hight-header); */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.block1 {
+    margin: auto 10vw;
+}
+.slogan {
+    color: white;
+    font-size: 4vw;
+    font-family: Montserrat;
+    font-weight: 900;
+}
+
+.description {
+    color: white;
+    font-size: 1.5vw;
+    font-family: MontserratLight;
+}
+/* main settings */
+.cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+.prices {
+    height: fit-content;
+    margin-bottom: 4vw;
+}
+.card {
+    height: 30vw;
+    width: 16vw;
+    text-align: center;
+    border-radius: 1vw;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2vw;
+}
+.card * {
+    margin: 1vw;
+}
+.card:hover {
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+.basic-plan {
+    background-color: hsl(209.86deg 98.12% 58.24%);
+}
+.plus-plan {
+    background-color: hsl(231.59deg 80.51% 61.76%);
+}
+.premium-plan {
+    background-color: hsl(266.83deg 64.14% 50.78%);
+}
+.plan {
+    font-family: Montserrat;
+}
+.price {
+    font-family: MontserratBold;
+}
+.features {
+    font-family: MontserratLight;
+}
+.features:hover {
+    transform: scale(1.3);
+    transition: all 0.3s;
+}
+.sign-up {
+    padding: 0.4vw 2vw;
+    background: none;
+    color: white;
+    font-size: 1.5vw;
+    font-family: MontserratBold;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 2vw;
+    font-weight: bolder;
+    justify-self: flex-end;
+    margin-top: auto;
+    cursor: pointer;
+}
+.sign-up:hover {
+    background-color: #df1763;
+    border: 4px solid;
+    transition: 0.3s;
+}
+.blue-slogan {
+    text-align: center;
+    color: hsl(209.86deg 98.12% 58.24%);
+    font-family: Montserrat;
+    font-size: 3.5vw;
+    padding-top: 2vw;
+}
+.upgrade {
+    text-align: center;
+    color: gray;
+    font-family: MontserratLight;
+    font-size: 1.9vw;
+    margin-bottom: 4vw;
+}
+.advantages {
+    background-image: url(about-photo.png);
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    height: var(--hight-section);
+    display: flex;
+}
+.search {
+    text-align: center;
+}
+[type=search] {
+    width: 80vw;
+    height: 6vw;
+    font-size: 3vw;
+    border: 3px solid hsl(209.86deg 98.12% 58.24%);
+    border-radius: 1.5vw;
+    margin-bottom: 4vw;
+    background-image: url(search.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 3vw;
+    padding-right: 2vw;
+    background-origin: content-box;
+    box-sizing: border-box;
+    background-color: hsl(209, 100%, 95%);
+}
+[placeholder="Search album, artist or song"] {
+    color: hsl(209.86deg 98.12% 58.24%);
+    font-family: MontserratLight;
+    font-size: 3vw; 
+}
+.icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: auto;
+    color: white;
+    width: 90vw;
+}
+.adv {
+    width: 23vw;
+    text-align: center;
+}
+.is-rounded {
+    width: 5vw;
+}
+.advantage {
+    font-family: Montserrat;
+    font-size: 2.5vw;
+}
+.descr {
+    font-family: MontserratLight;
+    font-size: 2vw;
+    line-height: 1.5;
+}
+
+/* alboms settings */
+.all-albums {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+.cover {
+    width: 20vw;
+    height: 20vw;
+    padding: 2vw;
+    object-fit: cover;
+}
+.cover:hover {
+    transform: scale(1.4);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+/* footer settings */
+.contacts {
+    height: var(--hight-header);
+    margin-top: 2vw;
+    background-color: hsl(209.86deg 98.12% 58.24%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social {
+    margin-right: 10vw;
+}
+.socialmedia {
+    padding-left: 1vw;
+    height: 3vw;
+}
+.socialmedia:hover {
+    cursor: pointer;
+}
+
+/* phone settings */
+@media (max-width: 480px) {
+    .logo {
+        height: 4vw;
+    }
+    .headlines {
+        height: var(--hight-header-mobile);
+    }
+    .description {
+        font-size: 2.5vw;
+    }
+    .hero {
+        height: var(--hight-section-phone);
+    }
+    .prices {
+        height: fit-content;
+    }
+    .cards {
+        margin-left: 5vw;
+        margin-right: 5vw;
+        flex-direction: column;
+    }
+    .card {
+        width: 100vw;
+        height: fit-content;
+        margin-top: 1vw;
+        margin-bottom: 3vw;
+        padding-bottom: 4vw;
+        border-radius: 0;
+    }
+    .sign-up {
+        margin-top: 3vw;
+        font-size: 4vw;
+        border-radius: 3vw;
+    }
+    .advantages {
+        height: var(--hight-section-phone);
+    }
+    .upgrade {
+        font-size: 3vw;
+    }
+    .slogan {
+        font-size: 5vw;
+    }
+    .blue-slogan {
+        font-size: 5vw;
+    }
+    .subscribe {
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+    .login {
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+    .plan {
+        font-size: 6vw;
+    }
+    .all-albums {
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    .cover {
+        padding: 1vw;
+        width: 40vw;
+        height: 40vw;
+    }
+    .contacts {
+        height: 12vw;
+        margin-top: 3vw;
+    }
+    .social {
+        margin-right: 7vw;
+    }
+    [type=search] {
+        width: 85vw;
+        height: 8vw;
+        font-size: 4vw;
+        border: 3px solid hsl(209.86deg 98.12% 58.24%);
+        border-radius: 2vw;
+        margin-bottom: 4vw;
+    }
+    .cover:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .card:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+    }
+    .socialmedia {
+        width: 3vw;
+    }
+}
+
+/* tablet settings */
+@media ((min-width: 481px) and (max-width: 1024px)){
+    .headlines {
+        height: 8vw;
+    }
+    .logo {
+        height: 4vw;
+    }
+    .hero {
+        height: var(--hight-section-tablet);
+    }
+    .description {
+        font-size: 2.5vw;
+    }
+    .prices {
+        height: 60vw;
+        padding-bottom: 5vw;
+    }
+    .cards {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+    .card {
+        width: 27vw;
+        height: fit-content;
+    }
+    .sign-up {
+        margin-top: 3vw;
+    }
+    .advantages {
+        height: var(--hight-section-tablet);
+    }
+    .upgrade {
+        font-size: 2.5vw;
+        margin-bottom: 5vw;
+    }
+    .slogan {
+        font-size: 5vw;
+    }
+    .blue-slogan {
+        font-size: 4vw;
+    }
+    .subscribe {
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+    .login {
+        font-size: 3vw;
+        border-radius: 3vw;
+    }
+    .cover {
+        padding: 1vw;
+        width: 40vw;
+        height: 40vw;
+    }
+    .cover:hover {
+        transform: scale(1.1);
+        transition: all 0.3s;
+        cursor: pointer;
+    }
+    .contacts {
+        height: 12vw;
+        margin-top: 3vw;
+    }
+    .social {
+        margin-right: 9vw;
+    }
+}
